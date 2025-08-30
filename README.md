@@ -1,65 +1,55 @@
-# reelrender README
+# reelrender
 
-This is the README for your extension "reelrender". After writing up a brief description, we recommend including the following sections.
-
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+**reelrender** is a Visual Studio Code extension that lets you create a **stylized, vertical preview of your Rust code**, perfect for creating content for **YouTube Shorts**, **Instagram Reels**, or other vertical video formats. It displays your code in a **narrow 9:16 layout** with syntax highlighting via Prism.js, automatically wrapping long lines so your code fits neatly into the preview panel.
 
 ---
 
-## Working with Markdown
+## Features
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+- **Live Rust Preview** – See your currently active Rust file rendered in a vertical preview panel.  
+- **Syntax Highlighting** – Powered by Prism.js, supporting Rust syntax out of the box.  
+- **Line Wrapping** – Long lines automatically wrap instead of scrolling horizontally.  
+- **Customizable Themes** – Easily switch Prism.js themes or include your own CSS.  
+- **9:16 Layout** – Ideal for vertical content creation; perfect for recording with OBS or other screen capture software.  
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+![Preview Example](images/feature-preview.png)  
 
-## For more information
+> Tip: Resize the preview panel in VS Code to match your preferred vertical format for Shorts/Reels.  
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+---
 
-**Enjoy!**
+## Requirements
+
+- Visual Studio Code (latest stable version recommended)  
+- Active Rust file in the editor (`.rs` extension)  
+
+Optional: For recording videos, OBS or any screen capture software.
+
+---
+
+## Extension Settings
+
+Currently, **reelrender** does not require additional settings, but you can customize the Prism.js theme by adding your own CSS file in the `media` folder and referencing it in the extension code.
+
+---
+
+## Known Issues
+
+- Only supports Rust files (`.rs`) for syntax highlighting.  
+- Custom CSS changes require a reload of the preview panel.  
+- Live updates may lag slightly for extremely large files.  
+
+---
+
+## Release Notes
+
+### 0.0.1
+Initial release of **reelrender**:
+- Live Rust preview panel
+- Prism.js syntax highlighting
+- 9:16 vertical layout with line wrapping
+
+---
+
+
+**Enjoy stylized Rust previews for your Shorts/Reels!**
