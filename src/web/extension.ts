@@ -93,14 +93,12 @@ function getWebviewContent(cssUris?: vscode.Uri[]): string {
     <body>
 		<pre><code class="language-rust" id="code"></code></pre>
 		<style>
-		pre[class*="language-" ],
-		code[class*="language-"] {
-			white-space: pre-wrap;
-			word-break: break-word;
-			overflow: auto;
-		}
-			
-
+			pre[class*="language-" ],
+			code[class*="language-"] {
+				white-space: pre-wrap;
+				word-break: break-word;
+				overflow: auto;
+			}
 		</style>
 		<script>
 			window.addEventListener('message', event => {
