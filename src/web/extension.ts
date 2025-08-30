@@ -73,7 +73,7 @@ function getWebviewContent(cssUris?: vscode.Uri[]): string {
                 height: 100vh;
             }
             pre {
-                width: 608px; /* narrow 9:16 style */
+                width: 520px; /* narrow 9:16 style */
                 white-space: pre-wrap;
                 word-wrap: break-word;
                 line-height: 1.6;
@@ -92,12 +92,22 @@ function getWebviewContent(cssUris?: vscode.Uri[]): string {
     </head>
     <body>
 		<pre><code class="language-rust" id="code"></code></pre>
+		<style>
+		pre[class*="language-" ],
+		code[class*="language-"] {
+			white-space: pre-wrap;
+			word-break: break-word;
+			overflow: auto;
+		}
+			
+
+		</style>
 		<script>
-		window.addEventListener('message', event => {
-			const codeBlock = document.getElementById('code');
-			codeBlock.textContent = event.data;
-			Prism.highlightElement(codeBlock);
-		});
+			window.addEventListener('message', event => {
+				const codeBlock = document.getElementById('code');
+				codeBlock.textContent = event.data;
+				Prism.highlightElement(codeBlock);
+			});
 		</script>
     </body>
     </html>`;
